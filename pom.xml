@@ -21,6 +21,8 @@
         <allure-maven.version>2.10.0</allure-maven.version>
         <allure-junit5.version>2.13.9</allure-junit5.version>
         <aspectjweaver.version>1.9.6</aspectjweaver.version>
+        <owner.version>1.0.8</owner.version>
+        <guice.version>5.0.1</guice.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +46,16 @@
                 <version>${allure-junit5.version}</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.aeonbits.owner</groupId>
+                <artifactId>owner-java8</artifactId>
+                <version>${owner.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.inject</groupId>
+                <artifactId>guice</artifactId>
+                <version>${guice.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -62,6 +74,14 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner-java8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
         </dependency>
     </dependencies>
 
@@ -129,6 +149,6 @@
                 <artifactId>allure-maven</artifactId>
             </plugin>
         </plugins>
-
     </build>
+
 </project>
